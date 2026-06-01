@@ -551,7 +551,7 @@ if analyze_btn:
         return "color: #e05252; font-weight:600;"
 
     styled = compare_df.style \
-        .applymap(style_pred, subset=["Prediction"]) \
+        .map(style_pred, subset=["Prediction"]) \
         .format({"Confidence (%)": "{:.2f}%", "Positive Prob": "{:.4f}", "Negative Prob": "{:.4f}"}) \
         .set_properties(**{"background-color": "#111", "color": "#e8e0d0", "border": "1px solid #222"}) \
         .set_table_styles([
