@@ -336,7 +336,7 @@ MODEL_META = {
     },
     "GRU": {
         "icon": "🔮",
-        "desc": "Gated recurrent unit — balanced power",
+        "desc": "Gated recurrent unit balanced power",
         "color": "#4caf82"
     },
 }
