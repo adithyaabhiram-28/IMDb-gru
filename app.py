@@ -385,7 +385,7 @@ with left_col:
     st.markdown('<span class="section-label">📝  Your Review</span>', unsafe_allow_html=True)
     review = st.text_area(
         "ENTER YOUR MOVIE REVIEW",
-        placeholder="e.g. "An absolute masterpiece every frame drips with intention. Nolan outdoes himself once again"",
+        placeholder='e.g. "An absolute masterpiece every frame drips with intention. Nolan outdoes himself once again"',
         height=160,
         label_visibility="collapsed"
     )
