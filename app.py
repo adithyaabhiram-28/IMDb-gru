@@ -385,7 +385,7 @@ with left_col:
     st.markdown('<span class="section-label">📝  Your Review</span>', unsafe_allow_html=True)
     review = st.text_area(
         "ENTER YOUR MOVIE REVIEW",
-        placeholder="e.g. "An absolute masterpiece — every frame drips with intention. Nolan outdoes himself once again…"",
+        placeholder="e.g. "An absolute masterpiece every frame drips with intention. Nolan outdoes himself once again…"",
         height=160,
         label_visibility="collapsed"
     )
@@ -453,7 +453,7 @@ if analyze_btn:
     <div class="verdict-wrap">
         <div class="verdict-icon">{v_icon}</div>
         <div>
-            <div class="verdict-label">Selected Model Verdict — {model_choice}</div>
+            <div class="verdict-label">Selected Model Verdict : {model_choice}</div>
             <div class="verdict-value {v_class}">{sentiment.upper()}</div>
             <div style="color:#f5c518; font-size:1.1rem; letter-spacing:0.05em; margin-top:0.2rem;">{star_str}</div>
         </div>
@@ -492,7 +492,7 @@ if analyze_btn:
         ))
         fig1.update_layout(
             **PLOTLY_LAYOUT,
-            title=dict(text="Pos vs Neg — " + model_choice, font=dict(family="Bebas Neue", size=14, color="#666")),
+            title=dict(text="Pos vs Neg : " + model_choice, font=dict(family="Bebas Neue", size=14, color="#666")),
         )
         st.plotly_chart(fig1, use_container_width=True)
 
