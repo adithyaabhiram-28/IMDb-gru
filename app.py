@@ -385,7 +385,7 @@ with left_col:
     st.markdown('<span class="section-label">📝  Your Review</span>', unsafe_allow_html=True)
     review = st.text_area(
         "ENTER YOUR MOVIE REVIEW",
-        placeholder="e.g. "An absolute masterpiece every frame drips with intention. Nolan outdoes himself once again…"",
+        placeholder="e.g. "An absolute masterpiece every frame drips with intention. Nolan outdoes himself once again"",
         height=160,
         label_visibility="collapsed"
     )
@@ -424,7 +424,7 @@ if analyze_btn:
         "GRU":       gru_model,
     }
 
-    with st.spinner("Analyzing review across all models…"):
+    with st.spinner("Analyzing review across all models"):
         sentiment, confidence, prob = predict_sentiment(models_map[model_choice], review)
 
         # Gather all comparisons
@@ -567,7 +567,7 @@ if analyze_btn:
     st.markdown(f"""
     <div class="card card-gold">
         <div style="font-family:'Playfair Display',serif; font-style:italic; font-size:1.05rem; color:#b0a890; line-height:1.7;">
-            "{review[:800]}{"…" if len(review) > 800 else ""}"
+            "{review[:800]}{"..." if len(review) > 800 else ""}"
         </div>
         <div style="margin-top:1rem; font-size:0.78rem; color:#444; letter-spacing:0.1em; text-transform:uppercase;">
             {word_count} words &nbsp;·&nbsp; analyzed by {model_choice} &nbsp;·&nbsp;
